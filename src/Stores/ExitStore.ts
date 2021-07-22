@@ -1,42 +1,56 @@
+import { writable } from "svelte/store";
+import type { exitConfig } from "../Components/Configs/ExitConfig";
 /**
  * A store that contains an array of the exit on the map
  */
-import {Readable, writable} from "svelte/store";
-
-export interface ExitConfig {
-    nameSpace : string,
-    active: boolean,
-    url : string,
-}
 
 function createExitStore() {
-    const {subscribe, set, update} = writable<ExitConfig[]>([]);
+    const { subscribe, update } = writable<exitConfig[]>(
+        [
+            {
+                nameSpace: 'north',
+                active: false,
+                url: '',
+            },
+            {
+                nameSpace: 'east',
+                active: false,
+                url: '',
+            },
+            {
+                nameSpace: 'south',
+                active: true,
+                url: '',
+            },
+            {
+                nameSpace: 'west',
+                active: false,
+                url: '',
+            }
+        ]);
 
     return {
         subscribe,
-        setExitConfig: (space: string, active: boolean, url: string): void => {
-            update((configs: ExitConfig[]) => {
+        addExit: (newExit: exitConfig): void => {
+            update((configs: exitConfig[]) => {
                 let found = false;
-                for (let i = 0; i < configs.length; i++) {
-                    if (configs[i].nameSpace === space) {
-                        configs[i].active = active;
-                        configs[i].url = url;
+                for (let config of configs) {
+                    if (config.nameSpace === newExit.nameSpace) {
+                        config.url = newExit.url;
+                        config.active = newExit.active;
                         found = true;
                         break;
                     }
                 }
 
-                if(!found) {
-                    configs.push({nameSpace: space, active: active, url: url});
+                if (!found) {
+                    configs.push(newExit);
                 }
 
                 return configs;
             })
-        },
-        resetJitsiStore: (): void => {
-            set([]);
         }
     }
 }
 
-export const exitStore = createExitStore();
+export const ExitStore = createExitStore();

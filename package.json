@@ -39,5 +39,9 @@
     "fix": "node_modules/.bin/eslint --fix src/ . --ext .ts",
     "svelte-check-watch": "svelte-check --fail-on-warnings --fail-on-hints --compiler-warnings \"a11y-no-onchange:ignore,a11y-autofocus:ignore,a11y-media-has-caption:ignore\" --watch",
     "svelte-check": "svelte-check --fail-on-warnings --fail-on-hints --compiler-warnings \"a11y-no-onchange:ignore,a11y-autofocus:ignore,a11y-media-has-caption:ignore\""
+  },
+  "dependencies": {
+    "@fontsource/press-start-2p": "^4.5.0",
+    "nes.css": "^2.3.0"
   }
 }

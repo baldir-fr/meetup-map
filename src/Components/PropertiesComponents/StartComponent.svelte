@@ -1,30 +1,26 @@
 <script lang="ts">
-    import { get } from "svelte/store";
-    import { exitStore } from "../../Stores/exitStore";
-    import { startStore } from "../../Stores/startStore";
+    import { ExitStore } from "../../Stores/ExitStore";
+    import { StartStore } from "../../Stores/StartStore";
 
-    let exitActives = get(exitStore).map(exit => {
-        if (exit.active === true){
-            return exit.nameSpace;
-        }
-    });
     let starts: string[] = [];
 
     function changeStart(): void {
-        console.log('starts : ', starts);
-        startStore.set(starts);
-        console.log($startStore);
+        StartStore.set(starts);
     }
 </script>
 
-<div>
-    <p>Default entry point of the map : (If more than one is checked, users will start randomly at one or another.)</p>
+<div class="nes-container with-title">
+    <p class="title">Start</p>
+    <p>Choose the entry point of your map. Use #[entry_point] at the end of the url of the map to enter by this entry point.</p>
+    <p>Default entry will always be 'south'. (even if disable as entry point.)</p>
     <form on:change={() => changeStart()}>
-        {#each exitActives as startPossible}
-            <label>
-                <input type="checkbox" bind:group={starts} value="{startPossible}">
-                {startPossible}
-            </label>
+        {#each $ExitStore as exit}
+            {#if exit.active }
+                <label class="chooseStart">
+                    <input type="checkbox" class="nes-checkbox" bind:group={starts} value="{exit.nameSpace}">
+                    <span>{exit.nameSpace}</span>
+                </label>
+            {/if}
         {/each}
     </form>
 </div>

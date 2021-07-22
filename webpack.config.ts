@@ -18,8 +18,10 @@ module.exports = {
         'iframe': './src/iframe.ts'
     },
     mode: mode,
-    devtool: isDevelopment ? 'inline-source-map' : 'source-map',
+    //devtool: isDevelopment ? 'inline-source-map' : 'source-map',
+    //devtool: isDevelopment ? 'eval' : 'source-map',
     devServer: {
+        port: 3000,
         contentBase: '.',
         host: 'localhost',
         disableHostCheck: true,
@@ -37,7 +39,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'ts-loader',
                 options: {
-                    transpileOnly: true,
+                    //transpileOnly: true,
                 },
             },
             {
@@ -67,7 +69,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(svelte)$/,
+                test: /\.svelte$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'svelte-loader',
@@ -143,11 +145,11 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new ForkTsCheckerWebpackPlugin({
+        //new ForkTsCheckerWebpackPlugin({
             //eslint: {
             //    files: './src/**/*.ts'
             //}
-        }),
+        //}),
         new MiniCssExtractPlugin({filename: '[name].[contenthash].css'}),
         new HtmlWebpackPlugin(
             {

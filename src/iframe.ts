@@ -1,10 +1,13 @@
-/// <reference path="../node_modules/@workadventure/iframe-api-typings/iframe_api.d.ts" />
-import App from './Components/App.svelte';
-
-console.log('Hello from iframe');
+/// <reference path="../../../workadventure-saas/workadventure/front/dist/src/iframe_api.d.ts" />
+// @ts-ignore
+import App from "./Components/App.svelte";
+import "../style/style.scss";
 
 const app = new App({
     target: document.body,
+    props: {
+        WA: WA,
+    }
 });
 
 export default app;

@@ -1,25 +1,29 @@
 <script lang="ts">
-    import {exitStore} from "../../Stores/exitStore";
-    import {get} from "svelte/store";
+    import { ExitStore } from "../../Stores/ExitStore";
+    import { get } from "svelte/store";
 
-    export let exitNameSpace: string
+    export let exitNameSpace: string;
 
-    let exitConfig = get(exitStore).find(exit => exit.nameSpace === exitNameSpace);
-    let active = exitConfig ? exitConfig.active : true;
-    let exitUrl = exitConfig ? exitConfig.url : ''; //TODO: Get the default value from the map.json
+    let exitConfig = get(ExitStore).find(e => e.nameSpace == exitNameSpace);
+    let exitActive = exitConfig ? exitConfig.active : false;
+    let exitUrl = exitConfig ? exitConfig.url : '';
 
-    function changeExitConfig():void {
-        exitStore.setExitConfig(exitNameSpace, active, exitUrl);
+    function changeExit() {
+        ExitStore.addExit({nameSpace: exitNameSpace, active: exitActive, url: exitUrl});
     }
+
 </script>
 
-<form on:change={() => changeExitConfig()}>
-    <label>
-        <input type="checkbox" bind:checked={active}>
-        Active
-    </label>
-    <label>
-        URL of the next map :
-        <input type="text" bind:value={exitUrl} disabled="{!active}">
-    </label>
-</form>
+<div class="nes-container with-title">
+    <p class="title">{exitNameSpace}</p>
+    <section on:change={changeExit}>
+        <label>
+            <input type="checkbox" class="nes-checkbox" bind:checked={exitActive}>
+            <span>Enable</span>
+        </label>
+        <label class={!exitActive ? "disabled" : ""}>
+            URL of the next map :
+            <input type="text" class="nes-input" bind:value={exitUrl} disabled="{!exitActive}">
+        </label>
+    </section>
+</div>
