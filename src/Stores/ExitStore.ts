@@ -1,11 +1,11 @@
 import { writable } from "svelte/store";
-import type { exitConfig } from "../Components/Configs/ExitConfig";
+import type { ExitConfig } from "../Components/Configs/ExitConfig";
 /**
  * A store that contains an array of the exit on the map
  */
 
 function createExitStore() {
-    const { subscribe, update } = writable<exitConfig[]>(
+    const { subscribe, update } = writable<ExitConfig[]>(
         [
             {
                 nameSpace: 'north',
@@ -31,8 +31,8 @@ function createExitStore() {
 
     return {
         subscribe,
-        addExit: (newExit: exitConfig): void => {
-            update((configs: exitConfig[]) => {
+        addExit: (newExit: ExitConfig): void => {
+            update((configs: ExitConfig[]) => {
                 let found = false;
                 for (let config of configs) {
                     if (config.nameSpace === newExit.nameSpace) {

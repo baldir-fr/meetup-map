@@ -2,7 +2,7 @@
  * Declare and export the youtubeConfig interface
  */
 
-export interface youtubeConfig {
+export interface YoutubeConfig {
     nameSpace : string,
     channelID : string,
     fullscreen : boolean,

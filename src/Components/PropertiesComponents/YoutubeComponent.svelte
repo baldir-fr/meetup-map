@@ -1,7 +1,7 @@
 <script lang="ts">
-    import type { youtubeConfig } from "../Configs/YoutubeConfig";
+    import type { YoutubeConfig } from "../Configs/YoutubeConfig";
 
-    export let youtube: youtubeConfig;
+    export let youtube: YoutubeConfig;
 
 </script>
 

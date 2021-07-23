@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
-import type { jitsiConfig } from "../Components/Configs/JitsiConfig";
-import type { youtubeConfig } from "../Components/Configs/YoutubeConfig";
+import type { JitsiConfig } from "../Components/Configs/JitsiConfig";
+import type { YoutubeConfig } from "../Components/Configs/YoutubeConfig";
 
 /**
  * A store that contains the type of conference wanted and the configuration of the jitsi and the youtube
@@ -9,10 +9,10 @@ import type { youtubeConfig } from "../Components/Configs/YoutubeConfig";
  *  - 2 : Big conference, jitsi on stage and youtube for audience
  */
 
-interface TypeConference {
+export interface TypeConference {
     typeConference : number,
-    jitsi : jitsiConfig,
-    youtube : youtubeConfig;
+    jitsi : JitsiConfig,
+    youtube : YoutubeConfig;
 }
 
 export const ConferenceStore = writable<TypeConference>(

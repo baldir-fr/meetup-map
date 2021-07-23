@@ -670,7 +670,97 @@
          "draworder":"topdown",
          "id":3,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":0,
+                 "id":2,
+                 "name":"conference",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":60.2896615050712,
+                 "y":364.703034350349
+                }, 
+                {
+                 "height":0,
+                 "id":3,
+                 "name":"meetingRooms",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":128.486163863266,
+                 "y":358.772903710505
+                }, 
+                {
+                 "height":0,
+                 "id":4,
+                 "name":"receptionWebsite",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":186.799115155057,
+                 "y":375.574940523394
+                }, 
+                {
+                 "height":0,
+                 "id":5,
+                 "name":"exits",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":247.088776660128,
+                 "y":373.598230310113
+                }, 
+                {
+                 "height":0,
+                 "id":6,
+                 "name":"starts",
+                 "point":true,
+                 "properties":[
+                        {
+                         "name":"persist",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "type":"variable",
+                 "visible":true,
+                 "width":0,
+                 "x":269.820944112859,
+                 "y":388.423556909721
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -934,7 +1024,7 @@
          "y":0
         }],
  "nextlayerid":141,
- "nextobjectid":2,
+ "nextobjectid":7,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -968,7 +1058,7 @@
          "value":"js\/main.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.7.0",
+ "tiledversion":"2021.03.23",
  "tileheight":32,
  "tilesets":[
         {
@@ -2620,6 +2710,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":"1.6",
+ "version":1.5,
  "width":46
 }

@@ -2,7 +2,7 @@
  * Declare and export the jitsiConfig interface
  */
 
-export interface jitsiConfig {
+export interface JitsiConfig {
     nameSpace : string,
     roomName: string,
     url : string,

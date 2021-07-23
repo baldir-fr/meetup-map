@@ -2,7 +2,7 @@
  * Declare and export the openCoWebSiteConfig interface
  */
 
-export interface openCoWebSiteConfig {
+export interface OpenCoWebSiteConfig {
     nameSpace : string,
     url : string,
     active : number,

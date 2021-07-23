@@ -1,7 +1,7 @@
 <script lang="ts">
-    import type { jitsiConfig } from "../Configs/JitsiConfig";
+    import type { JitsiConfig } from "../Configs/JitsiConfig";
 
-    export let jitsi: jitsiConfig;
+    export let jitsi: JitsiConfig;
     let showMore: boolean = false;
 
 </script>

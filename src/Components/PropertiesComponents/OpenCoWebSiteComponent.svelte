@@ -1,7 +1,7 @@
 <script lang="ts">
-    import type { openCoWebSiteConfig } from "../Configs/OpenCoWebSiteConfig";
+    import type { OpenCoWebSiteConfig } from "../Configs/OpenCoWebSiteConfig";
 
-    export let openCoWebSite: openCoWebSiteConfig
+    export let openCoWebSite: OpenCoWebSiteConfig
 
 </script>
 
