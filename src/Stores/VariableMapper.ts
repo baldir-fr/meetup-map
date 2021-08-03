@@ -1,4 +1,4 @@
-import type {Readable, Writable} from "svelte/store";
+import type {Readable} from "svelte/store";
 
 /**
  * A function that maps a WorkAdventure variable to a Svelte store
@@ -12,7 +12,7 @@ export function mapVariableToStore(variableName: string, store: Readable<unknown
         WA.state.saveVariable(variableName, value);
     });
 
-    WA.state.onVariableChange(variableName).subscribe((value) => {
+    WA.state.onVariableChange(variableName).subscribe((value: unknown) => {
         store.set(value);
     });
 }

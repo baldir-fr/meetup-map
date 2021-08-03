@@ -7,7 +7,7 @@
     "@tsconfig/svelte": "^1.0.10",
     "@types/mini-css-extract-plugin": "^1.4.3",
     "@types/webpack-dev-server": "^3.11.4",
-    "@workadventure/iframe-api-typings": "^1.2.1",
+    "@workadventure/iframe-api-typings": "^1.4.12",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.4",
     "eslint": "^7.24.0",
