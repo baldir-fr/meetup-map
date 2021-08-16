@@ -141,7 +141,7 @@ module.exports = {
             return pathData.chunk?.name === 'main' ? 'js/[name].js': 'js/[name].[contenthash].js';
         },
         path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
+        publicPath: 'auto'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
