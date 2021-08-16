@@ -13,9 +13,6 @@ import type {OpenCoWebSiteConfig} from "./Components/Configs/OpenCoWebSiteConfig
 import type {ExitConfig} from "./Components/Configs/ExitConfig";
 import type {YoutubeConfig} from "./Components/Configs/YoutubeConfig";
 
-WA.ui.registerMenuCommand('Configure the room', () => {
-    WA.nav.openCoWebSite("../iframe.html", true);
-});
 /*Start by hiding the following layer :
     - Open/North
     - Open/East
@@ -32,6 +29,11 @@ WA.room.hideLayer('meetingroom-6');
 WA.room.hideLayer('meetingroom-7');
 
 WA.onInit().then(() => {
+    if (WA.player.tags.includes('configure') || WA.player.tags.includes('admin')) {
+        WA.ui.registerMenuCommand('Configure the room', () => {
+            WA.nav.openCoWebSite("../iframe.html", true);
+        });
+    }
     applyMetadata();
 });
 
