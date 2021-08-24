@@ -1,0 +1,58 @@
+@import "~@fontsource/press-start-2p/index.css";
+@import "~nes.css/css/nes.css";
+
+*{
+  font-family: "Press Start 2P";
+}
+
+div.main-app div {
+  max-width: 98%;
+}
+
+div.nes-select {
+  max-width: 700px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.spaceComponent {
+  text-align: center;
+  h2 {
+    margin: 20px;
+  }
+}
+
+div.nes-container.with-title {
+  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 15px;
+
+  p.title {
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin: 0;
+    text-align: center;
+  }
+
+  section {
+    margin-top: 20px;
+
+    label.disabled {
+      color: gray;
+
+      input {
+        background-color: lightgray;
+        color: gray;
+      }
+    }
+
+    &.centered {
+      text-align: center;
+    }
+  }
+}
