@@ -1,16 +1,13 @@
 <script lang="ts">
     import ChooseSpace from "./ChooseSpace.svelte";
     import Miniature from "./Miniature.svelte";
-    import type { JitsiConfig } from "./Configs/JitsiConfig";
-    import type { YoutubeConfig } from "./Configs/YoutubeConfig";
     import type { SvelteComponent } from "svelte";
-    import type { WorkAdventureApi } from "../../../../workadventure.src/workadventure/front/dist/src/iframe_api";
+    import type { WorkAdventureApi } from "@workadventure/iframe-api-typings";
     import { ConferenceStore } from "../Stores/ConferenceStore";
     import { MeetingRoomStore } from "../Stores/MeetingRoomStore";
     import { OpenCoWebsiteStore } from "../Stores/OpenCoWebsiteStore";
     import { ExitStore } from "../Stores/ExitStore";
     import { StartStore } from "../Stores/StartStore";
-    import { get } from "svelte/store";
 
 
     export let WA: WorkAdventureApi;

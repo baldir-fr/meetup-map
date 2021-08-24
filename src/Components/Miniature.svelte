@@ -1,20 +1,23 @@
 <script lang="ts">
     import { MeetingRoomStore } from "../Stores/MeetingRoomStore";
-
+    import miniatureConfig5 from "../../image/mini-config-5-rooms.png"
+    import miniatureConfig4 from "../../image/mini-config-4-rooms.png"
+    import miniatureConfig3 from "../../image/mini-config-3-rooms.png"
+    import miniatureConfig2 from "../../image/mini-config-2-rooms.png"
 </script>
 
 <div class="img-miniature">
     {#if $MeetingRoomStore.nbRooms === 5}
-        <img src="../../image/mini-config-5-rooms.png" alt="Miniature Configuration with 5 rooms"/>
+        <img src="{miniatureConfig5}" alt="Miniature Configuration with 5 rooms"/>
     {/if}
     {#if $MeetingRoomStore.nbRooms === 4}
-        <img src="../../image/mini-config-4-rooms.png" alt="Miniature Configuration with 4 rooms"/>
+        <img src="{miniatureConfig4}" alt="Miniature Configuration with 4 rooms"/>
     {/if}
     {#if $MeetingRoomStore.nbRooms === 3}
-        <img src="../../image/mini-config-3-rooms.png" alt="Miniature Configuration with 3 rooms"/>
+        <img src="{miniatureConfig3}" alt="Miniature Configuration with 3 rooms"/>
     {/if}
     {#if $MeetingRoomStore.nbRooms === 2}
-        <img src="../../image/mini-config-2-rooms.png" alt="Miniature Configuration with 2 rooms"/>
+        <img src="{miniatureConfig2}" alt="Miniature Configuration with 2 rooms"/>
     {/if}
 
     <section class="show-space-Amphi">Amphi</section>

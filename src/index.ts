@@ -1,4 +1,4 @@
-/// <reference path="../../../workadventure.src/workadventure/front/dist/src/iframe_api.d.ts" />
+/// <reference path="../node_modules/@workadventure/iframe-api-typings/iframe_api.d.ts" />
 
 // You can write your WorkAdventure script here, if any.
 // The "WA" global object is available from anywhere.
@@ -13,9 +13,6 @@ import type {OpenCoWebSiteConfig} from "./Components/Configs/OpenCoWebSiteConfig
 import type {ExitConfig} from "./Components/Configs/ExitConfig";
 import type {YoutubeConfig} from "./Components/Configs/YoutubeConfig";
 
-WA.ui.registerMenuCommand('Configure the room', () => {
-    WA.nav.openCoWebSite("../iframe.html", true);
-});
 /*Start by hiding the following layer :
     - Open/North
     - Open/East
@@ -32,6 +29,11 @@ WA.room.hideLayer('meetingroom-6');
 WA.room.hideLayer('meetingroom-7');
 
 WA.onInit().then(() => {
+    if (WA.player.tags.includes('configure') || WA.player.tags.includes('admin')) {
+        WA.ui.registerMenuCommand('Configure the room', () => {
+            WA.nav.openCoWebSite("../iframe.html", true);
+        });
+    }
     applyMetadata();
 });
 
