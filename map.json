@@ -400,21 +400,21 @@
                          "name":"o-board-website-4",
                          "objects":[
                                 {
-                                 "height":348,
+                                 "height":352,
                                  "id":9,
                                  "name":"web-board-4",
                                  "properties":[
                                         {
                                          "name":"url",
                                          "type":"string",
-                                         "value":"https:\/\/wbo.ophir.dev\/boards\/sxb-meetup-room4"
+                                         "value":"https:\/\/excalidraw.com\/#room=sxbmeetuproom0004aaa,sxbmeetuproom00041AAAA"
                                         }],
                                  "rotation":0,
                                  "type":"website",
                                  "visible":true,
-                                 "width":422,
-                                 "x":809,
-                                 "y":298
+                                 "width":387,
+                                 "x":830,
+                                 "y":274
                                 }],
                          "opacity":1,
                          "type":"objectgroup",
