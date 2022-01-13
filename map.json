@@ -73,17 +73,6 @@
                          "width":300,
                          "x":0,
                          "y":700
-                        }, 
-                        {
-                         "height":480,
-                         "id":8,
-                         "name":"",
-                         "rotation":0,
-                         "type":"",
-                         "visible":true,
-                         "width":300,
-                         "x":0,
-                         "y":700
                         }],
                  "opacity":1,
                  "type":"objectgroup",
@@ -408,12 +397,12 @@
                         {
                          "draworder":"topdown",
                          "id":144,
-                         "name":"board-website-4",
+                         "name":"o-board-website-4",
                          "objects":[
                                 {
                                  "height":348,
                                  "id":9,
-                                 "name":"board-website-4",
+                                 "name":"web-board-4",
                                  "properties":[
                                         {
                                          "name":"url",
@@ -421,7 +410,7 @@
                                          "value":"https:\/\/wbo.ophir.dev\/boards\/sxb-meetup-room4"
                                         }],
                                  "rotation":0,
-                                 "type":"",
+                                 "type":"website",
                                  "visible":true,
                                  "width":422,
                                  "x":809,
