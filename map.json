@@ -40,6 +40,67 @@
          "y":0
         }, 
         {
+         "id":141,
+         "layers":[],
+         "name":"youtube_chat",
+         "opacity":1,
+         "type":"group",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "id":142,
+         "layers":[
+                {
+                 "draworder":"topdown",
+                 "id":143,
+                 "name":"o_twitch_chat",
+                 "objects":[
+                        {
+                         "height":230,
+                         "id":7,
+                         "name":"web_twitch_chat",
+                         "properties":[
+                                {
+                                 "name":"url",
+                                 "type":"string",
+                                 "value":"https:\/\/www.twitch.tv\/embed\/baldir_tv\/chat?parent=play.workadventu.re"
+                                }],
+                         "rotation":0,
+                         "type":"website",
+                         "visible":true,
+                         "width":160,
+                         "x":0,
+                         "y":730
+                        }, 
+                        {
+                         "height":0,
+                         "id":8,
+                         "name":"",
+                         "rotation":0,
+                         "type":"",
+                         "visible":true,
+                         "width":1.33333333333333,
+                         "x":-28.6666666666667,
+                         "y":822
+                        }],
+                 "opacity":1,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }],
+         "name":"twitch_chat",
+         "offsetx":-0.666666666666664,
+         "offsety":1.33333333333337,
+         "opacity":1,
+         "type":"group",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
          "id":42,
          "layers":[
                 {
@@ -1023,8 +1084,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":141,
- "nextobjectid":7,
+ "nextlayerid":144,
+ "nextobjectid":9,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1058,7 +1119,7 @@
          "value":"js\/main.js"
         }],
  "renderorder":"right-down",
- "tiledversion":"1.7.1",
+ "tiledversion":"1.7.2",
  "tileheight":32,
  "tilesets":[
         {
